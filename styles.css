@@ -1,0 +1,509 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  /* Helper classes */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Button Styling */
+  .btn {
+    padding: 12px 24px;
+    background-color: #00bcd4;
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+    letter-spacing: 1px;
+  }
+  
+  .btn:hover {
+    background-color: #0097a7;
+    transform: translateY(-4px); /* Hover effect */
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Heading Styles */
+  h1, h2, h3 {
+    color: #00bcd4;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Header Section */
+  header {
+    background-color: #0097a7;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  header .logo h1 {
+    font-size: 3.5rem;
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: 0.7;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  /* Navigation Styles */
+  header nav ul {
+    list-style: none;
+    margin-top: 40px;
+  }
+  
+  header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  header nav ul li a:hover {
+    color: #e0f7fa; /* Hover color */
+  }
+  
+  /* Home Section */
+  #home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #00bcd4, #004d40);
+    color: white;
+    animation: fadeInUp 2s ease-out;
+  }
+  
+  #home .intro h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #home .intro p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  #home .profile-img img {
+    border-radius: 50%;
+    max-width: 300px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: transform 0.5s ease-out;
+    margin-top: 200px;
+    margin-left: 500px;
+  }
+  
+  #home .profile-img img:hover {
+    transform: scale(1.1); /* Hover effect for profile image */
+  }
+  
+  /* Container for Profiles Section */
+  #coding-profiles {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  h2.text-center {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    margin-bottom: 30px;
+  }
+  
+  /* Profile Cards - Flexbox Layout */
+  .profile-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual Profile Card Styling */
+  .profile-card {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .profile-card a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .profile-card:hover {
+    transform: translateY(-10px); /* Hover effect for card */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-card i {
+    font-size: 3rem;
+    color: #00bcd4;
+    margin-bottom: 15px;
+  }
+  
+  .profile-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .profile-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* About Section */
+  #about {
+    background-color: #fff;
+    padding: 60px 0;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  #about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #about p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Skills Section */
+  #skills {
+    background-color: #f0f4f4;
+    padding: 80px 0;
+    animation: fadeInUp 2s ease-out;
+  }
+  
+  #skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Flexbox Layout for Skills */
+  .skills-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .skill {
+    background-color: #fff;
+    width: 22%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    animation: skillFadeIn 1.2s ease-out;
+  }
+  
+  .skill:hover {
+    transform: translateY(-10px); /* Hover effect */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Progress Bars */
+  .progress-bar {
+    width: 100%;
+    background-color: #e0f7fa;
+    border-radius: 10px;
+    height: 8px;
+    margin-top: 10px;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #00bcd4;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  /* Certifications Section */
+  #certifications {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .cert-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    margin: 20px;
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    animation: slideIn 1.5s ease-out;
+  }
+  
+  .cert-card:hover {
+    transform: translateY(-10px); /* Hover effect for card */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cert-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  .cert-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .cert-card a {
+    font-size: 1rem;
+    padding: 8px 16px;
+    background-color: #00bcd4;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-out;
+  }
+  
+  .cert-card a:hover {
+    background-color: #0097a7; /* Hover effect */
+  }
+  
+  /* Projects Section */
+  #projects {
+    background-color: #f0f4f4;
+    padding: 60px 0;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+  }
+  
+  .project-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px); /* Hover effect for project card */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .project-card p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Footer Section */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .footer-content p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icons .icon {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .social-icons .icon:hover {
+    color: #f0f0f0; /* Hover effect for icons */
+  }
+  
+  .social-icons .icon i {
+    transition: color 0.3s ease;
+  }
+  
+  /* Contact Form Styling */
+  #contact form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  #contact form input,
+  #contact form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  #contact form input:focus,
+  #contact form textarea:focus {
+    border-color: #00bcd4;
+    outline: none; /* Focused input border */
+  }
+  
+  #contact form button {
+    padding: 12px 30px;
+    background-color: #00bcd4;
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #contact form button:hover {
+    transform: translateY(-4px); /* Hover effect for button */
+    background-color: #0097a7;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes skillFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  
+  #typed {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    border-right: 3px solid #00bcd4; /* Typing cursor effect */
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 20s steps(30) 1s forwards, blink 0.7s step-end infinite;
+    display: inline-block;
+    color: #ddd;
+  }
+  
+  #intro {
+    opacity: 0;
+    animation: fadeIn 3s ease-out 4s forwards; /* Delay intro text */
+    font-size: 1.25rem;
+    color: #555;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-top: 20px;
+  }
+  
